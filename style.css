@@ -1,0 +1,117 @@
+/* Variáveis de Cores */
+:root {
+    --azul-escuro: #0f4c75;
+    --azul-claro: #3282b8;
+    --verde-agua: #bbe1fa;
+    --fundo: #f4f7f6;
+    --texto: #333333;
+    --card-bg: #ffffff;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* Container para centralizar o conteúdo */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Estilo do Cabeçalho */
+header {
+    background-color: var(--azul-escuro);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: var(--verde-agua);
+}
+
+/* Estilo do Conteúdo Principal */
+main {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espaço entre as seções */
+}
+
+/* Estilo dos "Cards" (Seções) */
+.card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--azul-claro);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    color: var(--azul-escuro);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card p {
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+/* Cores específicas para as bordas de cada tema */
+#desperdicio {
+    border-left-color: #3282b8; /* Azul */
+}
+
+#poluicao {
+    border-left-color: #e27d60; /* Laranja/Terra */
+}
+
+#desmatamento {
+    border-left-color: #85cdca; /* Verde */
+}
+
+/* Estilo do Rodapé */
+footer {
+    background-color: #1b262c;
+    color: #bbe1fa;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    .card {
+        padding: 20px;
+    }
+}
